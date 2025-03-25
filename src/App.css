@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,54 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.header-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.input-field {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }
