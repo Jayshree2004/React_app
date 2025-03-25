@@ -1,15 +1,19 @@
-
-import './App.css';
-import Header from './Components/Header';
-import AddUser from './Components/AddUser';
+import React, { useState } from "react";
+import Header from "./Components/AddUser";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <Header/> */}
-      <AddUser/>
-    </div>
-  );
+    const [users, setUsers] = useState([]);
+
+    const addUser = (user) => {
+        setUsers([...users, user]);
+    };
+
+    return (
+        <div>
+            <Header addUser={addUser} />
+=            
+        </div>
+    );
 }
 
 export default App;

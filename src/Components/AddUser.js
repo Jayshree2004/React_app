@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "../App.css";
 
-function Header() {
+function AddUser({ addUser }) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [users, setUsers] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -17,9 +16,8 @@ function Header() {
             alert("Please fill the Email field!");
         } else {
             const newUser = { name, email };
-            setUsers([...users, newUser]);
+            addUser(newUser); // Pass user data to parent component
 
-            // Log user details to the console
             console.log("Added User:", newUser);
 
             setName("");
@@ -57,4 +55,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default AddUser;
