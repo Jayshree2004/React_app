@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Header from "./Components/AddUser";
+import AddUser from "./Components/AddUser";
+import UserList from "./Components/Contact";
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -8,10 +9,14 @@ function App() {
         setUsers([...users, user]);
     };
 
+    const deleteUser = (index) => {
+        setUsers(users.filter((_, i) => i !== index));
+    };
+
     return (
         <div>
-            <Header addUser={addUser} />
-=            
+            <AddUser addUser={addUser} />
+            <UserList users={users} deleteUser={deleteUser} />
         </div>
     );
 }
